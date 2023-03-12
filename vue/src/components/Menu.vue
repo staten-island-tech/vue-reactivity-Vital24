@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1 v-for="Music in Musics" :key="Music">
-      {{ Music.name }} {{ Music.artist }} {{ Index++ }}
+      {{ Index++ }}) {{ Music.name }} {{ Music.artist }}
+      <hr />
     </h1>
   </div>
 </template>
@@ -606,10 +607,20 @@ export default {
           name: "Nuthin' but a G Thang",
         },
       ],
-      Index: 0,
+      Index: -9998,
     };
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  text-shadow: 1rem 1rem 2rem black;
+
+  color: white;
+  text-decoration: solid;
+}
+hr {
+  color: white;
+}
+</style>
