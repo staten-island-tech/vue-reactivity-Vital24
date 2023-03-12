@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1 class="Music" v-for="Music in Musics" :key="Music">
+    <h1 @click="Consoling" class="Music" v-for="Music in Musics" :key="Music">
       {{ Index++ }}. {{ Music.name }} {{ Music.artist }}
-      <hr />
     </h1>
   </div>
+  <button @click="Consoling">poop</button>
 </template>
 
 <script>
@@ -28,7 +28,7 @@ export default {
           year: 1991,
           artist: "N.W.A.",
           genre: "Gangsta rap",
-          name: "Fuck tha Police",
+          name: "Fu*k tha Police",
         },
         {
           year: 2000,
@@ -608,7 +608,20 @@ export default {
         },
       ],
       Index: -9998,
+      poop: "poop",
+      Lists: [],
     };
+  },
+
+  methods: {
+    Consoling: function (Lists) {
+      if (this.Lists.includes(event.target.textContent.substring(3))) {
+      } else {
+        this.Lists.push(event.target.textContent.substring(3));
+      }
+
+      console.log(this.Lists);
+    },
   },
 };
 </script>
