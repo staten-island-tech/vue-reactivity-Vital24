@@ -1,12 +1,17 @@
 <script setup>
-import Menu from "./components/Menu.vue";
+import Music from "./components/Music.vue";
+import PlayssVue from "./components/Playss.vue";
 </script>
 
 <template>
-  <Menu></Menu>
+  <section><PlayssVue></PlayssVue></section>
+  <section><Music></Music></section>
 </template>
 
 <style scoped>
+section {
+  width: 40vw;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1 v-for="Music in Musics" :key="Music">
-      {{ Index++ }}) {{ Music.name }} {{ Music.artist }}
+    <h1 class="Music" v-for="Music in Musics" :key="Music">
+      {{ Index++ }}. {{ Music.name }} {{ Music.artist }}
       <hr />
     </h1>
   </div>
@@ -614,12 +614,13 @@ export default {
 </script>
 
 <style scoped>
-h1 {
+.Music {
   text-shadow: 1rem 1rem 2rem black;
 
   color: white;
   text-decoration: solid;
 }
+
 hr {
   color: white;
 }

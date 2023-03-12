@@ -309,3 +309,17 @@
 </header>
 
 <RouterView />
+
+<template>
+  <h1>pOO</h1>
+</template>
+
+<script>
+export default {
+  data() {
+    PlayList: [Jack];
+  },
+};
+</script>
+
+<style scoped></style>
