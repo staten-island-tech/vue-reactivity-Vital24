@@ -26,6 +26,7 @@ a,
   body {
     display: flex;
     place-items: center;
+    background-color: #49c5b6;
   }
 
   #app {

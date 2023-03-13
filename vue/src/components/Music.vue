@@ -1,14 +1,23 @@
 <template>
+  <Playss :List="List"></Playss>
   <div>
-    <h1 @click="Consoling" class="Music" v-for="Music in Musics" :key="Music">
-      {{ Index++ }}. {{ Music.name }} {{ Music.artist }}
+    <h1
+      @click="Consoling"
+      class="Music"
+      v-for="(Music, index) in Musics"
+      :key="Music"
+    >
+      {{ index }}. {{ Music.name }} {{ Music.artist }}
     </h1>
   </div>
-  <button @click="Consoling">poop</button>
 </template>
 
 <script>
 export default {
+  Name: "Mus",
+  props: {
+    Lists: Array,
+  },
   data() {
     return {
       Musics: [
@@ -607,8 +616,6 @@ export default {
           name: "Nuthin' but a G Thang",
         },
       ],
-      Index: -9998,
-      poop: "poop",
       Lists: [],
     };
   },
