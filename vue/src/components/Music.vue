@@ -1,5 +1,5 @@
 <template>
-  <Playss :List="List"></Playss>
+  <PlayList v-bind:Lists="Lists"></PlayList>
   <div>
     <h1
       @click="Consoling"
@@ -13,11 +13,13 @@
 </template>
 
 <script>
+import PlayList from "./Playss.vue";
 export default {
-  Name: "Mus",
-  props: {
-    Lists: Array,
+  Name: "Music",
+  components: {
+    PlayList,
   },
+
   data() {
     return {
       Musics: [

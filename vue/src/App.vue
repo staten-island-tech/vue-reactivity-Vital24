@@ -1,13 +1,12 @@
-<script setup>
-import Music from "./components/Music.vue";
-import PlayssVue from "./components/Playss.vue";
-</script>
-
 <template>
-  <section><PlayssVue></PlayssVue></section>
+  <section><Playss></Playss></section>
   <section><Music></Music></section>
 </template>
 
+<script setup>
+import Music from "./components/Music.vue";
+import Playss from "./components/Playss.vue";
+</script>
 <style scoped>
 section {
   width: 40vw;

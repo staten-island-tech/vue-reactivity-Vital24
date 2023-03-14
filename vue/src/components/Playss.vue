@@ -1,20 +1,23 @@
 <template>
   <h1>PlayList</h1>
-  <h2>List</h2>
 
-  <Mus></Mus>
+  <h1 v-for="Music in Lists" :key="Music">{{ Music }}</h1>
 </template>
 
 <script>
-import Mus from "./Music.vue";
-
+import Music from "./Music.vue";
 export default {
+  name: "PlayList",
+  components: {
+    // Music,
+  },
   data() {
     return {};
   },
-
-  components: {
-    Mus,
+  props: {
+    Lists: {
+      type: Array,
+    },
   },
 };
 </script>
