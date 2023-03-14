@@ -1,11 +1,26 @@
 <template>
-  <section><Playss></Playss></section>
+  <section>
+    <Playss v-bind:Lists="Lists" v-for="Music in Lists" :key="Music"
+      >{{ Music }}></Playss
+    >
+  </section>
   <section><Music></Music></section>
 </template>
 
-<script setup>
+<script>
 import Music from "./components/Music.vue";
 import Playss from "./components/Playss.vue";
+export default {
+  components: {
+    Music,
+    Playss,
+  },
+  props: {
+    Lists: {
+      type: Array,
+    },
+  },
+};
 </script>
 <style scoped>
 section {

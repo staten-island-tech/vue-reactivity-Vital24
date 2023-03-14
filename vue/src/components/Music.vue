@@ -1,14 +1,18 @@
 <template>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
   <PlayList v-bind:Lists="Lists"></PlayList>
   <div>
-    <h1
-      @click="Consoling"
-      class="Music"
-      v-for="(Music, index) in Musics"
-      :key="Music"
-    >
-      {{ index }}. {{ Music.name }} {{ Music.artist }}
-    </h1>
+    <div :class="[Music]" v-for="(Music, index) in Musics" :key="Music">
+      <h1 class="{{ Music.name }}">
+        {{ index }}. {{ Music.name }} {{ Music.artist }}
+        <i @click="Consoling" style="font-size: 24px,color:red" :class="[Music]"
+          >&#xf067;</i
+        >
+      </h1>
+    </div>
   </div>
 </template>
 
@@ -624,9 +628,10 @@ export default {
 
   methods: {
     Consoling: function (Lists) {
-      if (this.Lists.includes(event.target.textContent.substring(3))) {
+      if (this.Lists.includes(event.target.className.substring(3))) {
+        console.log(event.target.className);
       } else {
-        this.Lists.push(event.target.textContent.substring(3));
+        this.Lists.push(event.target.className.substring(3));
       }
 
       console.log(this.Lists);

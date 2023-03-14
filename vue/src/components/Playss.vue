@@ -1,7 +1,13 @@
 <template>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
   <h1>PlayList</h1>
 
-  <h1 v-for="Music in Lists" :key="Music">{{ Music }}</h1>
+  <h1 v-bind:Lists="Lists" v-for="Music in Lists" :key="Music">
+    AA{{ Music }}
+  </h1>
 </template>
 
 <script>
