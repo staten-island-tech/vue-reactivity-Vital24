@@ -7,8 +7,11 @@
   <div>
     <div :class="[Music]" v-for="(Music, index) in Musics" :key="Music">
       <h1 class="{{ Music.name }}">
-        {{ index }}. {{ Music.name }} {{ Music.artist }}
-        <i @click="Consoling" style="font-size: 24px,color:red" :class="[Music]"
+        {{ index }}. {{ Music.name }} by {{ Music.artist }}
+        <i
+          @click="Consoling"
+          style="font-size: 24px,color:red"
+          :class="[Music.name, Music.artist]"
           >&#xf067;</i
         >
       </h1>
@@ -628,10 +631,10 @@ export default {
 
   methods: {
     Consoling: function (Lists) {
-      if (this.Lists.includes(event.target.className.substring(3))) {
+      if (this.Lists.includes(event.target.className)) {
         console.log(event.target.className);
       } else {
-        this.Lists.push(event.target.className.substring(3));
+        this.Lists.push(event.target.className);
       }
 
       console.log(this.Lists);
