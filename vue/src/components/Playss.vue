@@ -6,7 +6,7 @@
   <h1>PlayList</h1>
 
   <h1 v-bind:Lists="Lists" v-for="Music in Lists" :key="Music">
-    {{ Music.name }}
+    {{ Music }}
   </h1>
 </template>
 
