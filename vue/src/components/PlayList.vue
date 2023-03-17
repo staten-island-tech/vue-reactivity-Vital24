@@ -6,17 +6,14 @@
   <h1>PlayList</h1>
 
   <h1 v-bind:Lists="Lists" v-for="(Music, index) in Lists" :key="Music">
-    {{ index }} {{ Music }}
+    {{ index + 1 }} {{ Music }}
   </h1>
 </template>
 
 <script>
-import Music from "./MusicList.vue";
 export default {
   name: "PlayList",
-  components: {
-    // Music,
-  },
+
   data() {
     return {};
   },

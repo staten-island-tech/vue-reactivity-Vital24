@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import PlayList from "./Playss.vue";
+import PlayList from "./PlayList.vue";
 
 export default {
   Name: "MusicList",
@@ -39,7 +39,7 @@ export default {
   },
 
   methods: {
-    Consoling: function (Lists) {
+    Consoling: function () {
       if (this.Lists.includes(event.target.className)) {
         console.log(event.target.className);
       } else {
@@ -47,6 +47,10 @@ export default {
       }
 
       console.log(this.Lists);
+    },
+
+    ListData: function () {
+      this.$emit(`List`);
     },
   },
 };
