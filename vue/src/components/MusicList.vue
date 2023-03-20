@@ -45,12 +45,8 @@ export default {
       } else {
         this.Lists.push(event.target.className);
       }
-
       console.log(this.Lists);
-    },
-
-    ListData: function () {
-      this.$emit(`List`);
+      this.$emit("toParent", this.Lists);
     },
   },
 };

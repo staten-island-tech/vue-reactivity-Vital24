@@ -1,6 +1,9 @@
 <template>
-  <PlayList v-bind:Lists="Lists"></PlayList>
-  <section><MusicList v-bind:Musics="ListofMusic"></MusicList></section>
+  <!-- <PlayList v-bind:Lists="Lists"></PlayList> -->
+
+  <MusicList @toParent="handler" v-bind:Musics="ListofMusic"></MusicList>
+  <!-- <button @click="console.log(Lists)"></button> -->
+  <!-- <section><MusicList v-bind:Musics="ListofMusic"></MusicList></section> -->
 </template>
 
 <script>
@@ -615,6 +618,12 @@ export default {
   props: {
     ListofAdded: {
       type: Array,
+    },
+  },
+  methods: {
+    handler(Lists) {
+      // Log Data From Child Component
+      console.log(Lists); // "Dummy Data"
     },
   },
 };
