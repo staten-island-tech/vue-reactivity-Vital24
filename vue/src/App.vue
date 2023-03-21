@@ -1,9 +1,6 @@
 <template>
-  <!-- <PlayList v-bind:Lists="Lists"></PlayList> -->
-
+  <PlayList @toParent="handler" v-bind:Lists="ListofAdded"></PlayList>
   <MusicList @toParent="handler" v-bind:Musics="ListofMusic"></MusicList>
-  <!-- <button @click="console.log(Lists)"></button> -->
-  <!-- <section><MusicList v-bind:Musics="ListofMusic"></MusicList></section> -->
 </template>
 
 <script>
@@ -609,6 +606,7 @@ export default {
           name: "Nuthin' but a G Thang",
         },
       ],
+      ListofAdded: [],
     };
   },
   components: {
@@ -621,9 +619,10 @@ export default {
     },
   },
   methods: {
-    handler(Lists) {
+    handler(A) {
       // Log Data From Child Component
-      console.log(Lists); // "Dummy Data"
+      this.ListofAdded.push(A);
+      console.log(this.ListofAdded); // "Dummy Data"
     },
   },
 };
