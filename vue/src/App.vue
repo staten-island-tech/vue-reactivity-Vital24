@@ -1,5 +1,5 @@
 <template>
-  <PlayList @toParent="handler" v-bind:Lists="ListofAdded"></PlayList>
+  <PlayList v-bind:Pants="ListofAdded"></PlayList>
   <MusicList @toParent="handler" v-bind:Musics="ListofMusic"></MusicList>
 </template>
 
@@ -613,15 +613,11 @@ export default {
     MusicList,
     PlayList,
   },
-  props: {
-    ListofAdded: {
-      type: Array,
-    },
-  },
+
   methods: {
-    handler(A) {
+    handler(Dummy) {
       // Log Data From Child Component
-      this.ListofAdded.push(A);
+      this.ListofAdded = Dummy;
       console.log(this.ListofAdded); // "Dummy Data"
     },
   },

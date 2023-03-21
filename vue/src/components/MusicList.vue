@@ -1,10 +1,5 @@
 <template>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-
-  <div>
+  <section>
     <div
       :class="[Music]"
       id="Music"
@@ -17,12 +12,11 @@
           @click="Consoling"
           style="font-size: 24px,color:red"
           :class="[Music.name, Music.artist]"
-          id="&#xf067;"
-          >&#xf067;</i
+          >+</i
         >
       </h1>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -68,5 +62,8 @@ export default {
 
 hr {
   color: white;
+}
+svg {
+  width: 25px;
 }
 </style>
