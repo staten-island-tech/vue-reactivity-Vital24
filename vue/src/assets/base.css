@@ -55,9 +55,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
+  margin: .5rem ;
   position: relative;
-  font-weight: normal;
+
 } */
 
 body {

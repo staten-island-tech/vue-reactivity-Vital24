@@ -1,6 +1,9 @@
 <template>
-  <PlayList v-bind:Pants="ListofAdded"></PlayList>
-  <MusicList @toParent="handler" v-bind:Musics="ListofMusic"></MusicList>
+  <PlayList v-bind:AddedMusic="ListofAdded"></PlayList>
+  <MusicList
+    @toParent="MusicDataFromChild"
+    v-bind:Musics="ListofMusic"
+  ></MusicList>
 </template>
 
 <script>
@@ -23,54 +26,7 @@ export default {
           genre: "Gangsta rap",
           name: "Nuthin' But a G Thang",
         },
-        {
-          year: 1991,
-          artist: "N.W.A.",
-          genre: "Gangsta rap",
-          name: "Fu*k tha Police",
-        },
-        {
-          year: 2000,
-          artist: "Eminem",
-          genre: "Hip hop",
-          name: "Stan",
-        },
-        {
-          year: 2011,
-          artist: "Kendrick Lamar",
-          genre: "Hip hop",
-          name: "Swimming Pools (Drank)",
-        },
-        {
-          year: 1996,
-          artist: "2Pac",
-          genre: "Gangsta rap",
-          name: "California Love",
-        },
-        {
-          year: 2010,
-          artist: "Kanye West",
-          genre: "Hip hop",
-          name: "Runaway",
-        },
-        {
-          year: 1988,
-          artist: "Public Enemy",
-          genre: "Political hip hop",
-          name: "Fight the Power",
-        },
-        {
-          year: 1998,
-          artist: "Jay-Z",
-          genre: "Hip hop",
-          name: "Hard Knock Life",
-        },
-        {
-          year: 1993,
-          artist: "Wu-Tang Clan",
-          genre: "Hip hop",
-          name: "C.R.E.A.M.",
-        },
+
         {
           year: 1987,
           artist: "Eric B. & Rakim",
@@ -143,84 +99,7 @@ export default {
           genre: "J-Pop",
           name: "Makenaide",
         },
-        {
-          year: 1994,
-          artist: "L'Arc~en~Ciel",
-          genre: "J-Rock",
-          name: "Blame",
-        },
-        {
-          year: 1999,
-          artist: "Utada Hikaru",
-          genre: "J-Pop",
-          name: "First Love",
-        },
-        {
-          year: 2003,
-          artist: "Misia",
-          genre: "J-Pop",
-          name: "Kokoro Hitotsu",
-        },
-        {
-          year: 2005,
-          artist: "Orange Range",
-          genre: "J-Rock",
-          name: "O2",
-        },
-        {
-          year: 2007,
-          artist: "Exile",
-          genre: "J-Pop",
-          name: "Choo Choo TRAIN",
-        },
-        {
-          year: 2008,
-          artist: "Arashi",
-          genre: "J-Pop",
-          name: "Truth/Kaze no Mukou e",
-        },
-        {
-          year: 2010,
-          artist: "AKB48",
-          genre: "J-Pop",
-          name: "Beginner",
-        },
-        {
-          year: 2012,
-          artist: "One Ok Rock",
-          genre: "J-Rock",
-          name: "The Beginning",
-        },
-        {
-          year: 2013,
-          artist: "Perfume",
-          genre: "J-Pop",
-          name: "Mirai no Museum",
-        },
-        {
-          year: 2014,
-          artist: "Kana Nishino",
-          genre: "J-Pop",
-          name: "Darling",
-        },
-        {
-          year: 2015,
-          artist: "Babymetal",
-          genre: "J-Metal",
-          name: "Road of Resistance",
-        },
-        {
-          year: 2016,
-          artist: "Kenshi Yonezu",
-          genre: "J-Pop",
-          name: "Orion",
-        },
-        {
-          year: 2017,
-          artist: "Nogizaka46",
-          genre: "J-Pop",
-          name: "Nigemizu",
-        },
+
         {
           year: 2018,
           artist: "Hikaru Utada feat. Skrillex",
@@ -268,42 +147,6 @@ export default {
           artist: "Jay Chou",
           genre: "Mandopop",
           name: "Nunchucks",
-        },
-        {
-          year: 2003,
-          artist: "Faye Wong",
-          genre: "Mandopop",
-          name: "Eyes On Me",
-        },
-        {
-          year: 1987,
-          artist: "Danny Chan",
-          genre: "Cantopop",
-          name: "First Love",
-        },
-        {
-          year: 2011,
-          artist: "G.E.M.",
-          genre: "Mandopop",
-          name: "Goodbye",
-        },
-        {
-          year: 1983,
-          artist: "Beyond",
-          genre: "Cantopop",
-          name: "Glorious Years",
-        },
-        {
-          year: 1985,
-          artist: "Teresa Teng",
-          genre: "Mandopop",
-          name: "Sweet Honey",
-        },
-        {
-          year: 2015,
-          artist: "Jam Hsiao",
-          genre: "Mandopop",
-          name: "The Devil Inside Me",
         },
         {
           year: 1992,
@@ -615,9 +458,9 @@ export default {
   },
 
   methods: {
-    handler(Dummy) {
+    MusicDataFromChild(DataRecieved) {
       // Log Data From Child Component
-      this.ListofAdded = Dummy;
+      this.ListofAdded = DataRecieved;
       console.log(this.ListofAdded); // "Dummy Data"
     },
   },

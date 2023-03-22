@@ -6,14 +6,15 @@
       v-for="(Music, index) in Musics"
       :key="Music"
     >
-      <h1 class="{{ Music.name }}">
+      <h1>
         {{ index + 1 }}. {{ Music.name }} by {{ Music.artist }}
-        <i
+        <button
           @click="Consoling"
-          style="font-size: 24px,color:red"
-          :class="[Music.name, Music.artist]"
-          >+</i
+          style="font-size: 24px, color:red"
+          :class="[Music.name, By, Music.artist]"
         >
+          Add to Playlist
+        </button>
       </h1>
     </div>
   </section>
@@ -35,6 +36,7 @@ export default {
   data() {
     return {
       Lists: [],
+      By: "by",
     };
   },
 
@@ -62,8 +64,5 @@ export default {
 
 hr {
   color: white;
-}
-svg {
-  width: 25px;
 }
 </style>
