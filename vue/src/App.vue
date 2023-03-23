@@ -1,5 +1,8 @@
 <template>
-  <PlayList v-bind:AddedMusic="ListofAdded"></PlayList>
+  <PlayList
+    @Removes="RemovedMusicData"
+    v-bind:AddedMusic="ListofAdded"
+  ></PlayList>
   <MusicList
     @toParent="MusicDataFromChild"
     v-bind:Musics="ListofMusic"
@@ -458,6 +461,14 @@ export default {
   },
 
   methods: {
+    RemovedMusicData(RemoveRecieved) {
+      // Log Data From Child Component
+      this.ListofAdded = RemoveRecieved;
+      console.log(this.ListofAdded); // "Dummy Data"
+      NewList: AddedMusic.filter((item) => item !== event.target.className);
+      console.log(this.NewList);
+    },
+
     MusicDataFromChild(DataRecieved) {
       // Log Data From Child Component
       this.ListofAdded = DataRecieved;
