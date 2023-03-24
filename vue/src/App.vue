@@ -7,6 +7,8 @@
     @toParent="MusicDataFromChild"
     v-bind:Musics="ListofMusic"
   ></MusicList>
+  <h1>{{ ListofAdded }}</h1>
+  <h1>AA{{ RemoveRecieved }}</h1>
 </template>
 
 <script>
@@ -453,20 +455,33 @@ export default {
         },
       ],
       ListofAdded: [],
+      ListofRemoved: "",
     };
+  },
+  props: {
+    Rere: {
+      type: Array,
+    },
   },
   components: {
     MusicList,
     PlayList,
   },
 
+  props: {
+    Removed: {
+      type: Array,
+    },
+  },
+
   methods: {
     RemovedMusicData(RemoveRecieved) {
       // Log Data From Child Component
-      this.ListofAdded = RemoveRecieved;
-      console.log(this.ListofAdded); // "Dummy Data"
-      NewList: AddedMusic.filter((item) => item !== event.target.className);
-      console.log(this.NewList);
+      // this.ListofAdded = RemoveRecieved;
+      this.ListofRemoved = RemoveRecieved;
+      console.log(this.ListofRemoved);
+      let NewList = this.ListofAdded.filter((item) => item !== RemoveRecieved);
+      console.log(NewList);
     },
 
     MusicDataFromChild(DataRecieved) {

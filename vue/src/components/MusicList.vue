@@ -43,6 +43,7 @@ export default {
   methods: {
     Consoling: function () {
       if (this.Lists.includes(event.target.className)) {
+        this.Lists.push(event.target.className);
         console.log(event.target.className);
       } else {
         this.Lists.push(event.target.className);

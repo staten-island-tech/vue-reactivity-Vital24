@@ -28,8 +28,8 @@ export default {
     RemoveMusic(event) {
       console.log(event.target.className);
       let Removed = event.target.className;
-      this.$emit("Removes", Removed);
       event.target.parentElement.remove();
+      this.$emit("Removes", Removed);
     },
   },
 };
