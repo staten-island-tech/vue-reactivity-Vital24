@@ -29,7 +29,7 @@ export default {
       console.log(event.target.className);
       let Removed = event.target.className;
       event.target.parentElement.remove();
-      this.$emit("Removes", Removed);
+      this.$emit("removes", Removed);
     },
   },
 };

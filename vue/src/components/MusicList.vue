@@ -1,4 +1,5 @@
 <template>
+  <h1>AA {{ Lists }}</h1>
   <section>
     <div
       :class="[Music]"
@@ -29,13 +30,15 @@ export default {
     PlayList,
   },
   props: {
+    Lists: {
+      type: Array,
+    },
     Musics: {
       type: Array,
     },
   },
   data() {
     return {
-      Lists: [],
       By: "by",
     };
   },
@@ -43,8 +46,6 @@ export default {
   methods: {
     Consoling: function () {
       if (this.Lists.includes(event.target.className)) {
-        this.Lists.push(event.target.className);
-        console.log(event.target.className);
       } else {
         this.Lists.push(event.target.className);
       }
