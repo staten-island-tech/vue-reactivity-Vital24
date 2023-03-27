@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style scoped>
-.Music {
+/* .Music {
   text-shadow: 1rem 1rem 2rem black;
 
   color: white;
@@ -48,5 +48,5 @@ hr {
 }
 svg {
   width: 25px;
-}
+} */
 </style>

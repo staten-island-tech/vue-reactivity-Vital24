@@ -1,5 +1,4 @@
 <template>
-  <h1>AA {{ Lists }}</h1>
   <section>
     <div
       :class="[Music]"
@@ -57,7 +56,7 @@ export default {
 </script>
 
 <style scoped>
-#Music {
+/* #Music {
   text-shadow: 1rem 1rem 2rem black;
 
   color: white;
@@ -66,5 +65,5 @@ export default {
 
 hr {
   color: white;
-}
+} */
 </style>

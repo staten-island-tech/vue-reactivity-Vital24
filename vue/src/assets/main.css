@@ -3,7 +3,7 @@
 #app {
   
   margin: 0 auto;
-  background-color: #49c5b6;
+
   display: flex;
   justify-content: space-around;
   font-weight: normal;
@@ -22,11 +22,13 @@ a,
   }
 }
 
+button{
+  background-color: #c3d0ad;
+}
 @media (min-width: 1024px) {
   body {
     display: flex;
     place-items: center;
-    background-color: #49c5b6;
   }
 
   #app {

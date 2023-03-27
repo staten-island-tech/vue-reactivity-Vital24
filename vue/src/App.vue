@@ -8,8 +8,6 @@
     v-bind:Musics="ListofMusic"
     v-bind:Lists="ListofAdded"
   ></MusicList>
-  <!-- <h1>{{ ListofAdded }}</h1> -->
-  <h1>AA{{ ListofAdded }}</h1>
 </template>
 
 <script>
@@ -490,7 +488,13 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style>
+html {
+  background-color: #112e34;
+}
+h1 {
+  color: #c3d0ad;
+}
 section {
   width: 40vw;
 }
