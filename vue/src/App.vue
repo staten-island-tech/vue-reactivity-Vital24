@@ -1,16 +1,22 @@
 <template>
-  <PlayList
-    @removes="RemovedMusicData"
-    v-bind:AddedMusic="ListofAdded"
-  ></PlayList>
-  <MusicList
-    @toParent="MusicDataFromChild"
-    v-bind:Musics="ListofMusic"
-    v-bind:Lists="ListofAdded"
-  ></MusicList>
+  <SocialBox></SocialBox>
+  <section>
+    <PlayList
+      class="Dog"
+      @removes="RemovedMusicData"
+      v-bind:AddedMusic="ListofAdded"
+    ></PlayList>
+    <MusicList
+      class="Cat"
+      @toParent="MusicDataFromChild"
+      v-bind:Musics="ListofMusic"
+      v-bind:Lists="ListofAdded"
+    ></MusicList>
+  </section>
 </template>
 
 <script>
+import SocialBox from "./components/SocialBox.vue";
 import MusicList from "./components/MusicList.vue";
 import PlayList from "./components/PlayList.vue";
 
@@ -461,6 +467,7 @@ export default {
   components: {
     MusicList,
     PlayList,
+    SocialBox,
   },
 
   props: {
@@ -488,75 +495,25 @@ export default {
   },
 };
 </script>
+
 <style>
 html {
-  background-color: #112e34;
-}
-h1 {
-  color: #c3d0ad;
-}
-section {
-  width: 40vw;
-}
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+  background-color: #282a2b;
+  color: #ebe7e0;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.Dog {
+  float: right;
 }
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.Cat {
+  float: left;
 }
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+body {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 2rem;
+  place-items: center;
+  justify-content: space-around;
+  align-content: center;
 }
 </style>

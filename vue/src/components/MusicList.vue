@@ -1,5 +1,6 @@
 <template>
   <section>
+    <h1>Music</h1>
     <div
       :class="[Music]"
       id="Music"
@@ -12,6 +13,7 @@
           @click="Consoling"
           style="font-size: 24px, color:red"
           :class="[Music.name, By, Music.artist]"
+          id="Button"
         >
           Add to Playlist
         </button>
@@ -56,6 +58,59 @@ export default {
 </script>
 
 <style scoped>
+/* CSS */
+button {
+  background-color: #3dd1e7;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #000000;
+
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.25rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 0.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+button:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
 /* #Music {
   text-shadow: 1rem 1rem 2rem black;
 
@@ -65,5 +120,9 @@ export default {
 
 hr {
   color: white;
+} */
+/* section {
+  display: flex;
+  flex-direction: column;
 } */
 </style>
