@@ -1,25 +1,24 @@
 <template>
-  <section>
-    <h1>Music</h1>
+  <h1 class="Header">Music</h1>
+  <div class="Hidden">
     <div
       :class="[Music]"
       id="Music"
       v-for="(Music, index) in Musics"
       :key="Music"
     >
-      <h1>
+      <h2>
         {{ index + 1 }}. {{ Music.name }} by {{ Music.artist }}
         <button
           @click="Consoling"
           style="font-size: 24px, color:red"
           :class="[Music.name, By, Music.artist]"
-          id="Button"
         >
           Add to Playlist
         </button>
-      </h1>
+      </h2>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -58,6 +57,21 @@ export default {
 </script>
 
 <style scoped>
+html {
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  position: relative;
+}
+.Hidden {
+  margin: 2rem 2rem 0 0;
+
+  height: 45rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
 /* CSS */
 button {
   background-color: #3dd1e7;
@@ -111,18 +125,4 @@ button:hover:after {
     font-size: 1.25rem;
   }
 }
-/* #Music {
-  text-shadow: 1rem 1rem 2rem black;
-
-  color: white;
-  text-decoration: solid;
-}
-
-hr {
-  color: white;
-} */
-/* section {
-  display: flex;
-  flex-direction: column;
-} */
 </style>

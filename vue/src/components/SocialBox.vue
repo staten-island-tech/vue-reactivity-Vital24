@@ -1,25 +1,28 @@
 <template>
   <section class="card">
-    <img
-      @click="target = `https://mikewhalen.tech/Resources`"
-      src="https://cdn-icons-png.flaticon.com/512/1419/1419647.png"
-      alt="Instagram"
-    />
-    <img
-      @click="target = `https://mikewhalen.tech/Resources`"
-      src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-square-black-icon.png"
-      alt="Discord"
-    />
-    <img
-      @click="target = `https://mikewhalen.tech/Resources`"
-      src="https://cdn-icons-png.flaticon.com/512/1384/1384044.png"
-      alt="Twitter"
-    />
-    <img
-      @click="target = `https://mikewhalen.tech/Resources`"
-      src="https://cdn-icons-png.flaticon.com/512/60/60580.png"
-      alt="Youtube"
-    />
+    <a target="_blank" href="https://instagram.com/p/Chv0g4tMMqe">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1419/1419647.png"
+        alt="Instagram"
+      />
+    </a>
+
+    <a target="_blank" href="https://discord.gg/V37aPXJNKY">
+      <img
+        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-square-black-icon.png"
+        alt="Discord"
+    /></a>
+
+    <a target="_blank" href="https://www.youtube.com/watch?v=JMGJWeHPRzY">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1384/1384044.png"
+        alt="Youtube"
+    /></a>
+    <a target="_blank" href="https://twitter.com/whalensiths?lang=en">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/60/60580.png"
+        alt="Twitter"
+    /></a>
   </section>
 </template>
 

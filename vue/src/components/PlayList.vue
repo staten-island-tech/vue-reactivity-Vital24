@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <div>
     <div class="Music">
       <h1>Personal Playlist</h1>
       <h1 v-for="(Music, index) in AddedMusic" :key="Music">
@@ -9,7 +9,7 @@
         </button>
       </h1>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

@@ -1,17 +1,15 @@
 <template>
   <SocialBox></SocialBox>
   <section>
-    <PlayList
-      class="Dog"
-      @removes="RemovedMusicData"
-      v-bind:AddedMusic="ListofAdded"
-    ></PlayList>
     <MusicList
-      class="Cat"
       @toParent="MusicDataFromChild"
       v-bind:Musics="ListofMusic"
       v-bind:Lists="ListofAdded"
     ></MusicList>
+    <PlayList
+      @removes="RemovedMusicData"
+      v-bind:AddedMusic="ListofAdded"
+    ></PlayList>
   </section>
 </template>
 
@@ -501,13 +499,11 @@ html {
   background-color: #282a2b;
   color: #ebe7e0;
 }
+section {
+  display: flex;
+  flex-direction: row;
+}
 
-.Dog {
-  float: right;
-}
-.Cat {
-  float: left;
-}
 body {
   display: flex;
   grid-template-columns: 1fr 1fr;
