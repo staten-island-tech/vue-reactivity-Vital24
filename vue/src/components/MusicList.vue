@@ -1,5 +1,5 @@
 <template>
-  <h1 class="Header">Music</h1>
+  <h1></h1>
   <div class="Hidden">
     <div
       :class="[Music]"
@@ -57,18 +57,10 @@ export default {
 </script>
 
 <style scoped>
-html {
-  display: flex;
-  flex-direction: column;
-}
-
-.Header {
-  position: relative;
-}
 .Hidden {
-  margin: 2rem 2rem 0 0;
+  min-width: 40vw;
 
-  height: 45rem;
+  height: 47.5rem;
   overflow: hidden;
   overflow-y: scroll;
 }

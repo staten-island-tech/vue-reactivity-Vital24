@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="Music">
+    <div class="Hidden">
       <h1>Personal Playlist</h1>
       <h1 v-for="(Music, index) in AddedMusic" :key="Music">
         {{ index + 1 }} {{ Music }}
@@ -36,6 +36,13 @@ export default {
 </script>
 
 <style scoped>
+.Hidden {
+  min-width: 40vw;
+
+  height: 47.5rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
 button {
   background-color: #e05c7b;
   border: 0 solid #e5e7eb;

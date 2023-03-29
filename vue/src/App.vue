@@ -1,5 +1,6 @@
 <template>
   <SocialBox></SocialBox>
+  <h1>Music</h1>
   <section>
     <MusicList
       @toParent="MusicDataFromChild"
@@ -457,6 +458,7 @@ export default {
           name: "Nuthin' but a G Thang",
         },
       ],
+
       ListofAdded: [],
       NewList: [],
     };
@@ -496,6 +498,7 @@ export default {
 
 <style>
 html {
+  text-align: center;
   background-color: #282a2b;
   color: #ebe7e0;
 }
