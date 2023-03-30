@@ -13,7 +13,7 @@
         alt="Discord"
     /></a>
 
-    <a target="_blank" href="https://www.youtube.com/watch?v=JMGJWeHPRzY">
+    <a target="_blank" href="https://youtu.be/uJGZ7YAwFaY">
       <img
         src="https://cdn-icons-png.flaticon.com/512/1384/1384044.png"
         alt="Youtube"
@@ -42,7 +42,6 @@ export default {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   width: 80vw;
-  background-image: url("");
 }
 section {
   display: flex;

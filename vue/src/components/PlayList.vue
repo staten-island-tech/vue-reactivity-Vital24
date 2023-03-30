@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .Hidden {
-  min-width: 40vw;
+  width: 40vw;
 
   height: 47.5rem;
   overflow: hidden;

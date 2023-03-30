@@ -1,6 +1,11 @@
 <template>
-  <SocialBox></SocialBox>
-  <h1>Music</h1>
+  <AnimateTest>aa</AnimateTest>
+  <!-- <SocialBox></SocialBox>
+  <h1>-CraZi Music-</h1>
+  <iframe
+    src="https://www.youtube.com/watch?v=uJGZ7YAwFaY"
+    frameborder="0"
+  ></iframe>
   <section>
     <MusicList
       @toParent="MusicDataFromChild"
@@ -11,13 +16,14 @@
       @removes="RemovedMusicData"
       v-bind:AddedMusic="ListofAdded"
     ></PlayList>
-  </section>
+  </section> -->
 </template>
 
 <script>
-import SocialBox from "./components/SocialBox.vue";
-import MusicList from "./components/MusicList.vue";
-import PlayList from "./components/PlayList.vue";
+import AnimateTest from "./components/AnimateTest.vue";
+// import SocialBox from "./components/SocialBox.vue";
+// import MusicList from "./components/MusicList.vue";
+// import PlayList from "./components/PlayList.vue";
 
 export default {
   data() {
@@ -468,6 +474,7 @@ export default {
     MusicList,
     PlayList,
     SocialBox,
+    AnimateTest,
   },
 
   props: {
