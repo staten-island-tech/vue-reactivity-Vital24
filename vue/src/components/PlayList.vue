@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="Hidden">
-      <h1>Personal Playlist</h1>
+      <h1 class="Center">Personal Playlist</h1>
       <h1 v-for="(Music, index) in AddedMusic" :key="Music">
         {{ index + 1 }} {{ Music }}
         <button :class="[Music]" @click="RemoveMusic">
@@ -95,21 +95,4 @@ button:hover:after {
     font-size: 1.25rem;
   }
 }
-/* .Music {
-  text-shadow: 1rem 1rem 2rem black;
-
-  color: white;
-  text-decoration: solid;
-}
-
-hr {
-  color: white;
-}
-svg {
-  width: 25px;
-} */
-/* section {
-  display: flex;
-  flex-direction: column;
-} */
 </style>

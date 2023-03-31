@@ -1,11 +1,9 @@
 <template>
-  <AnimateTest>aa</AnimateTest>
-  <!-- <SocialBox></SocialBox>
-  <h1>-CraZi Music-</h1>
-  <iframe
-    src="https://www.youtube.com/watch?v=uJGZ7YAwFaY"
-    frameborder="0"
-  ></iframe>
+  <h1 class="Center">-CraZi Music-</h1>
+  <hr />
+  <SocialBox></SocialBox>
+
+  <hr />
   <section>
     <MusicList
       @toParent="MusicDataFromChild"
@@ -16,19 +14,20 @@
       @removes="RemovedMusicData"
       v-bind:AddedMusic="ListofAdded"
     ></PlayList>
-  </section> -->
+  </section>
 </template>
 
 <script>
-import AnimateTest from "./components/AnimateTest.vue";
-// import SocialBox from "./components/SocialBox.vue";
-// import MusicList from "./components/MusicList.vue";
-// import PlayList from "./components/PlayList.vue";
+import { gsap } from "gsap";
+
+import SocialBox from "./components/SocialBox.vue";
+import MusicList from "./components/MusicList.vue";
+import PlayList from "./components/PlayList.vue";
 
 export default {
   data() {
     return {
-      ListofMusic: [
+      ListofMusic: gsap.utils.shuffle([
         {
           year: 1994,
           artist: "Notorious B.I.G.",
@@ -463,7 +462,7 @@ export default {
           genre: "Hip-Hop",
           name: "Nuthin' but a G Thang",
         },
-      ],
+      ]),
 
       ListofAdded: [],
       NewList: [],
@@ -474,7 +473,6 @@ export default {
     MusicList,
     PlayList,
     SocialBox,
-    AnimateTest,
   },
 
   props: {
@@ -504,8 +502,10 @@ export default {
 </script>
 
 <style>
-html {
+.Center {
   text-align: center;
+}
+html {
   background-color: #282a2b;
   color: #ebe7e0;
 }
